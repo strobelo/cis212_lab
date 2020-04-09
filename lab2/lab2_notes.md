@@ -56,7 +56,7 @@ Use only ONE grep invocation to find the following:
 1. How many papers COULD Hamilton have contributed to total?
 1. How many papers COULD Madison have contributed to total?
 1. How many papers written by just Hamilton?
-1. How many papers written by both Hamilton and Madison?
+1. How many papers MIGHT both Hamilton and Madison have contributed to?
 1. How many papers are still disputed?
 
 #### Name Drops
