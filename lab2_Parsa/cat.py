@@ -31,7 +31,7 @@ def main():
                     sflag = True
                 else:
                     sys.stderr.write("unknown option -- {}\n".format(sys.argv[i][j]))
-
+                    exit(1)
         else:
             break
         cntr += 1
