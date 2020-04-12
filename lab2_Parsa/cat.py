@@ -6,7 +6,7 @@ def cat(n, b, s, args):
         open_files.append(sys.stdin)
     else:
         for arg in args:
-            open_files.append(open(arg, 'r'))
+            open_files.append(open(arg, 'r')) # an error might happen here, see if you can figure it out
 
     for file in open_files:
         for line in file:
