@@ -66,7 +66,7 @@ $ ./mycat
 ```
 
 ## Testing our code
-How to check our code is the same as Linux `diff`?
+How to check our code is the same as Linux `cat`?
 ```
 $ diff <(cat file1.txt file2.txt) <(./mycat file1.txt file2.txt)
 ```
