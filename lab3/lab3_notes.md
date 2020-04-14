@@ -22,6 +22,12 @@ $ man 3 printf
 $ man 3 sqrt
 ```
 
+## Vim: Setting up for programming
+Enable syntax highlighting in Vim:
+```
+:syntax on
+```
+
 ## `cat`
 Today we're going to implement a barebones `cat` using C. 
 ```
