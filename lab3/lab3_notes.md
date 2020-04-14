@@ -54,7 +54,7 @@ OBJECTS=cat.o # we have only one source file, so it will be compiled into just o
 # tell Make that our executable depends on having compiled our object file
 mycat: $(OBJECTS)
     # tell Make how to compile our executable by linking our object files (there's only one to link in this case, cat.o)
-    $(CC) -o mycat $(OBJECTS)
+    $(CC) $(CCFLAGS) -o mycat $(OBJECTS)
 
 # tell Make that it should recreate cat.o anytime cat.c is changed
 # no rule below this dependency means it will use the default built-in rule (which sees that cat.c is a C file and thus uses the C compiler)
