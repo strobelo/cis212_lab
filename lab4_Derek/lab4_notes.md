@@ -80,6 +80,8 @@ char* buf = (char*) malloc(bufsize * sizeof(char));
 for(int i = 0; i < bufsize; i++) {
     printf("%c", buf[i]);
 }
+/* ... */
+free(buf);
 ```
 
 * Buffer Overflowing
@@ -89,6 +91,8 @@ double* buf = (double*) malloc(bufsize * sizeof(float));
 for(int i = 0; i < bufsize; i++) {
     buf[i] = 0.0f;
 }
+/* ... */
+free(buf);
 ```
 
 * Keeping Pointers to Stack Memory Around Too Long
