@@ -50,6 +50,79 @@ $ gdb lab
 ### `(gdb) watch`
 * `gdb` will watch a variable and pause execution any time its value changes
 
+## Debugging Tips / Strategies:
+* The Trace-Through
+    * Step through your code line-by-line to see where it differs from what you intended
+    * Time-consuming, but much easier with `gdb`!
+    * Tip: you can save time in `gdb` by using the abbreviations (e.g. `p` instead of `print`)
+
+* The Sanity Check
+    * Run an example which you are CONFIDENT will work, and examine your code from SQUARE ONE
+    * Example: Let's say your program calculates the mean value of an array of values. 
+        * Sanity check would be something UNRELATED to your actual computation, and seemingly much more trivial. For example, did I allocate the correct amount of memory? Does my program work for just 1 number, in the trivial case?
+    
+    * With `gdb`, just `print`ing values can be a valuable sanity check
+
+
+
+## Bug Tier List:
+### S - Disaster Waiting to Happen
+* Dereferencing pointers to memory you didn't allocate
+```C
+int* i = NULL;
+printf("%d", *i);
+```
+
+* Reading Uninitialized memory
+```C
+int bufsize = 100000;
+char* buf = (char*) malloc(bufsize * sizeof(char));
+for(int i = 0; i < bufsize; i++) {
+    printf("%c", buf[i]);
+}
+```
+
+* Buffer Overflowing
+```C
+int bufsize = 100000;
+double* buf = (double*) malloc(bufsize * sizeof(float));
+for(int i = 0; i < bufsize; i++) {
+    buf[i] = 0.0f;
+}
+```
+
+* Keeping Pointers to Stack Memory Around Too Long
+```C
+int* foo() {
+    int buf[5] = {1, 2, 3, 4, 5};
+    return buf;
+}
+
+int main() {
+    int* f = foo();
+    printf("%d", f[4]);
+}
+```
+
+### A - Hard to find, easy fix
+* Semicolon-muted loops
+```C
+int sum = 0;
+for(int i = 0; i < 100; i++); {
+    sum += i;
+}
+printf("%d", sum);
+```
+
+* Off By One
+```C
+int bufsize = 40;
+int buf[bufsize];
+for(int i = 0; i <= bufsize; i++) {
+    buf[i] = i;
+}
+```
+
 
 
 
