@@ -56,6 +56,7 @@ Example:
 ```C
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
 int main() {
     /** Create an nxn matrix of doubles
@@ -111,6 +112,7 @@ Hmm... Line 9 is our inner malloc. Ah! We never `free`'d that one. One `free` pe
 ```C
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
 int main() {
     /** Create an nxn matrix of doubles
