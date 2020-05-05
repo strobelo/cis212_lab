@@ -43,7 +43,7 @@ class Stack():
         '''
         if not self.isEmpty():
             item = self._data[-1]
-            del self._data[-1]
+            self._data.pop() # Unfortunately Python list slice and delete are not constant, but pop() is. Think about how you might do this in constant time using C!
             return item
         else:
             return None

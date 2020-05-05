@@ -19,7 +19,7 @@ Data structures you've used:
 Data structures are tools, and tools are used for a specific job they're good at. Often times there will be some overlap in what different data structures CAN do; your job as a programmer is to choose the data structure that will work best for what you're trying to do. You CAN use the back of a screwdriver to pound in a nail... but a hammer would make the job much easier.
 
 ## The Stack
-Stack: **F**irst **I**n **F**irst **O**ut
+Stack: **L**ast **I**n **F**irst **O**ut
 ![stack toy](https://i.pinimg.com/originals/9d/b0/ca/9db0ca4e8adf65d6b572a1e540f18e75.jpg)
 
 ### Why is this useful? Seems unnecesarily restrictive.
@@ -66,7 +66,10 @@ def test_parentheses(str):
                 return -1
             else:
                 nValid += 1 # close paren matched to open paren; increment valid counter
-    return nValid
+    if s.isEmpty():
+        return nValid
+    else:
+        return -1
 ```
 
 Cool right? Actually, stacks are used all the time in grammar processing. Your favorite C compiler, for example, almost certainly uses a stack to determine parenthesization really similarly to this!
