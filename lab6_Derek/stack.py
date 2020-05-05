@@ -18,6 +18,7 @@ class Stack():
         '''
         (object) -> None
         Pushes an item onto the stack.
+        Complexity: O(1)
         '''
         self._data.append(item)
 
@@ -26,6 +27,7 @@ class Stack():
         () -> object
         Retrieves (but do not remove) the top element of the stack
         If stack is empty, returns None
+        Complexity: O(1)
         '''
         if not self.isEmpty():
             return self._data[-1]
@@ -37,6 +39,7 @@ class Stack():
         () -> object
         Retrieves and remove the top element of the stack
         If stack is empty, returns None
+        Complexity: O(1)
         '''
         if not self.isEmpty():
             item = self._data[-1]
@@ -49,6 +52,7 @@ class Stack():
         '''
         () -> int
         Returns the number of elements in the stack
+        Complexity: O(1)
         '''
         return len(self._data)
 
@@ -56,6 +60,7 @@ class Stack():
         '''
         () -> bool
         Return True if stack has no elements, False otherwise
+        Complexity: O(1)
         '''
         return len(self._data) == 0
 
