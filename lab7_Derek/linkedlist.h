@@ -28,7 +28,7 @@ struct linkedlist_data {
 typedef struct linkedlist {
 
     int (*get)(const LinkedList* ll, int i, void** out); // get element i
-    int (*push_back)(const LinkedList* ll, void* data);
+    int (*push_back)(const LinkedList* ll, void* data); // append data to end of 
     void (*destroy)(const LinkedList* ll); // destroy entire linked list
 
 } LinkedList;
