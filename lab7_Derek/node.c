@@ -39,27 +39,27 @@ static Node node_template = {
 };
 
 const Node* Node_create(Node* next, void* item, void (*freeValue)(void* i)) {
-    Node* node = (Node*) malloc (sizeof(Node));
+    Node* node = (Node*) malloc (sizeof(Node)); // alloc dispatch table
     if(node == NULL) { 
         // do nothing
     } else {
         NodeData* data = (NodeData*) malloc(sizeof(NodeData));
         if(data == NULL) {
-            free(node);
+            free(node); // data alloc failed; return dispatch table mem
             node = NULL;
             
         } else {
-            *node = node_template;
-            data->next = next;
-            data->item = item;
-            data->freeValue = freeValue;
-            node->self = data;
+            *node = node_template; // initialize dispatch table
+            data->next = next; // assign next node
+            data->item = item; // assign node's payload data
+            data->freeValue = freeValue; // assign freeV function
+            node->self = data; // assign private data to dispatch table
         }
     }
     return node;
 }
 
-int main(int argc, char** argv) {
+int main() {
     char* a = "first";
     char* b = "second";
     char* c = "third";

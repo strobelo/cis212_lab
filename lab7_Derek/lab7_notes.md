@@ -28,7 +28,7 @@ Why use Linked List over something like ArrayList or just an array?
 
 <details>
     <summary>Append item to front or back</summary>
-    O(1)! All the nodes are individual heap memory, so we can just allocate a new one and set its next to the head (to add to front) or add end's next to it (add to back).
+    O(1)! All the nodes are individual heap memory, so we can just allocate a new one and set its next to the head (to add to front) or set tail's next to it (add to back).
 </details>
 
 Think about how the complexity of other operations (like removing an element or adding an element at a specific index) might differ as well!
