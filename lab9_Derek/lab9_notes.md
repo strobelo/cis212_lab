@@ -7,7 +7,9 @@ Spring 2020
 https://oregon.qualtrics.com/jfe/form/SV_6XOcvmXTKdlgfmB
 
 ## Why deque?
-It's a pretty niche data structure. But for some problems, it's really handy. If you're interested, check out https://en.wikipedia.org/wiki/Work_stealing
+It's a pretty niche data structure. But for some problems, it's really handy. If you're interested, check out https://en.wikipedia.org/wiki/Work_stealing.
+
+Here's another example: We are writing a web browser and keeping a browser history record. We want to automatically record visited sites in order, but also provide a function to clear the oldest hour or day of records. How could we solve this using a deque?
 
 ## How deque?
 Deque is just a queue where we can access *both* ends. You could kind of think of it like a queue AND a stack at the same time. 
