@@ -3,6 +3,9 @@ Derek Strobel
 CIS212 University of Oregon  
 Spring 2020
 
+## Virtual learning survey! Voluntary, but please do participate if you'd like and have time.
+https://oregon.qualtrics.com/jfe/form/SV_6XOcvmXTKdlgfmB
+
 ## Why deque?
 It's a pretty niche data structure. But for some problems, it's really handy. If you're interested, check out https://en.wikipedia.org/wiki/Work_stealing
 
