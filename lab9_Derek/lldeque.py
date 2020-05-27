@@ -33,12 +33,14 @@ class lldeque():
         n = self.sentinel.next
         n.next.prev = self.sentinel
         self.sentinel.next = self.sentinel.next.next
+        self.size -= 1
         return n.value
         
     def pop_back(self):
         n = self.sentinel.prev
         n.prev.next = self.sentinel
         self.sentinel.prev = self.sentinel.prev.prev
+        self.size -= 1
         return n.value
     
     def peek_front(self):
